@@ -35,7 +35,7 @@ class _LoginDemoState extends State<LoginDemo> {
                     /*decoration: BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.circular(50.0)),*/
-                    child: Image.asset('lib/assets/images/meeting.png')),
+                    child: Image.asset('asset/images/meeting.png')),
               ),
             ),
             Padding(

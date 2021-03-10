@@ -1,4 +1,4 @@
-import 'package:MyApp/Login.dart';
+import 'package:Istishara/Login.dart';
 import 'package:flutter/material.dart';
 
 
@@ -6,10 +6,7 @@ import 'package:flutter/material.dart';
 class StartApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return /*MaterialApp(
-      theme: ThemeData(
-      primarySwatch: Colors.deepPurple,),*/
-       _Start();
+    return _Start();
   }
 }
 
@@ -20,9 +17,13 @@ class _Start extends StatefulWidget {
   }
 }
 
+
+
 class _StartState extends State<_Start> {
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return  Scaffold(
            backgroundColor: Colors.white,
             body: Stack( children: [
@@ -31,14 +32,16 @@ class _StartState extends State<_Start> {
         ) )
           ,Align(alignment: Alignment(0,0.5),
                 child: Container(
-      width: double.infinity,
-      height: 250,
+      width: screenWidth,
+      height: screenHeight/2,
       alignment: Alignment.center,
       child: Column(children: [
-        Row( children: [Container(width: 110,),  Text("New to Istishara? Create account",style: TextStyle(fontWeight: FontWeight.w900,fontSize: 15))],),
-         Container(height: 15,),
+         Center(child: Text("\n"),),
+         Center( child: Text("New to Istishara? Create account",style: TextStyle(fontWeight: FontWeight.w900,fontSize: 15))),
+         Container(child:Text(""),),
         Row(children: [
-          OutlinedButton(
+          Container(width: screenWidth/2, child:
+          OutlinedButton( 
             child: Text("Sign Up as Help-Seeker",
                 style: TextStyle(
                     fontSize: 16,
@@ -50,10 +53,10 @@ class _StartState extends State<_Start> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(32.0),
               ),
-              minimumSize: Size(43,50)
-            ),
+            ),)
           ),
           Spacer(),
+          Container(width: screenWidth/2.1 ,child:
           OutlinedButton(
             child: Text("Sign Up as an Expert",
                 style: TextStyle(
@@ -66,25 +69,21 @@ class _StartState extends State<_Start> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(32.0),
               ),
-              minimumSize: Size(40,50)
             ),
-          )
+          ))
         ]),
-        Container(height: 75,),
-        Row(children: [Container(width: 120,),  Text("Already have an account?",style: TextStyle(fontWeight: FontWeight.w900,fontSize: 15))],),
-        Container(height: 15,),
-        Row(
-          children: [
-            Container(
-              width: 170,
-            ),
-            OutlinedButton(
+        Container(height: screenHeight/10,),
+        Center( child: Text("Already have an account?",style: TextStyle(fontWeight: FontWeight.w900,fontSize: 15))),
+        Container(child: Text(""),),
+        Center(
+            child: OutlinedButton(
               onPressed: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (_) => MyApp()));},
               child: Text("Sign In",
+                 
                   style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 15,
                       fontWeight: FontWeight.w900,
                       color: Color(0xff5848CF))),
               style: ElevatedButton.styleFrom(
@@ -95,8 +94,8 @@ class _StartState extends State<_Start> {
                 minimumSize: Size(100,50)
               ),
             ),
-          ],
-        ),
+          ),
+
       ]),
     )
     )

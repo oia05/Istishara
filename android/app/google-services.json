@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "538856304031",
+    "project_id": "cmps253-softwareengineering",
+    "storage_bucket": "cmps253-softwareengineering.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538856304031:android:d415509f420493ed2e61aa",
+        "android_client_info": {
+          "package_name": "com.Istishara.practice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538856304031-qd9hhnmf1k645ggc4dvvp130aa303upm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpfAqgbwHMfIDuwgxHzs8WvstUGTF0KDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538856304031-qd9hhnmf1k645ggc4dvvp130aa303upm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

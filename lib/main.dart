@@ -4,6 +4,7 @@ import 'package:loading_animations/loading_animations.dart';
 import 'dart:math';
 import './Start.dart';
 import 'package:connectivity/connectivity.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() {
   runApp(Display());
@@ -35,14 +36,14 @@ void _showDialog(String title, String content, BuildContext context) {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-            title: new Text("You are " + title),
-            content: new Text(content),
+            title: Text("You are " + title),
+            content: Text(content),
             actions: <Widget>[
-              new FlatButton(
+              FlatButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  child: new Text("Close"))
+                  child: Text("Close"))
             ]);
       });
 }
@@ -72,16 +73,16 @@ class _DisplayState extends State<DisplayDemo> {
   }
 
   List<String> listImages = [
-    'assets/images/nb1.png',
-    'assets/images/nb2.png',
-    'assets/images/nb3.png',
-    'assets/images/nb4.png',
-    'assets/images/nb5.png',
-    'assets/images/nb6.png',
-    'assets/images/nb7.png',
-    'assets/images/nb8.png',
-    'assets/images/nb9.png',
-    'assets/images/nb10.png',
+    'asset/images/nb1.png',
+    'asset/images/nb2.png',
+    'asset/images/nb3.png',
+    'asset/images/nb4.png',
+    'asset/images/nb5.png',
+    'asset/images/nb6.png',
+    'asset/images/nb7.png',
+    'asset/images/nb8.png',
+    'asset/images/nb9.png',
+    'asset/images/nb10.png',
   ];
   Random rnd;
 
@@ -122,12 +123,12 @@ class _DisplayState extends State<DisplayDemo> {
               alignment: Alignment(0, 0),
               child: Text(tips[imageNb()])),
           Container(height: 30),
-          LoadingBumpingLine.circle(
+          LoadingFadingLine.circle(
             borderColor: Colors.purple[900],
             borderSize: 3.0,
             size: 50.0,
             backgroundColor: Colors.deepPurple,
-            duration: Duration(milliseconds: 500),
+            duration: Duration(milliseconds: 1000),
           )
         ]));
   }
