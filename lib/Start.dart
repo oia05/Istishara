@@ -40,11 +40,11 @@ class _StartState extends State<_Start> {
          Center( child: Text("New to Istishara? Create account",style: TextStyle(fontWeight: FontWeight.w900,fontSize: 15))),
          Container(child:Text(""),),
         Row(children: [
-          Container(width: screenWidth/2, child:
+          Container(width: screenWidth/2.3, height:screenHeight/15 ,child:
           OutlinedButton( 
-            child: Text("Sign Up as Help-Seeker",
+            child: Text(" Sign Up as\n Help-Seeker",
                 style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 17,
                     fontWeight: FontWeight.w900,
                     color: Color(0xff5848CF) )),
             onPressed: null,
@@ -56,9 +56,9 @@ class _StartState extends State<_Start> {
             ),)
           ),
           Spacer(),
-          Container(width: screenWidth/2.1 ,child:
+          Container(width: screenWidth/2.3,height: screenHeight/15,child:
           OutlinedButton(
-            child: Text("Sign Up as an Expert",
+            child: Text(" Sign Up as an\n Expert",
                 style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w900,
@@ -83,7 +83,7 @@ class _StartState extends State<_Start> {
               child: Text("Sign In",
                  
                   style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 17,
                       fontWeight: FontWeight.w900,
                       color: Color(0xff5848CF))),
               style: ElevatedButton.styleFrom(

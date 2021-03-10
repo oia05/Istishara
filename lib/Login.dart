@@ -23,19 +23,13 @@ class _LoginDemoState extends State<LoginDemo> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Center(
-              child: Text("ISTISHARA"),
-            ),
             Padding(
-              padding: const EdgeInsets.only(top: 60.0),
+              padding: const EdgeInsets.only(top: 40.0),
               child: Center(
                 child: Container(
                     width: 200,
                     height: 150,
-                    /*decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(50.0)),*/
-                    child: Image.asset('asset/images/meeting.png')),
+                    child: Image.asset('asset/images/nb1.png')),
               ),
             ),
             Padding(
@@ -87,8 +81,7 @@ class _LoginDemoState extends State<LoginDemo> {
             ),
             SizedBox(
               height: 130,
-            ),
-            Text('New User? Create Account')
+            )
           ],
         ),
       ),
