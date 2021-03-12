@@ -69,7 +69,7 @@ class _DisplayState extends State<DisplayDemo> {
               "Please check your Internet Connection and try again", context);
           break;
         }
-      }*
+      }
     });
   }
 
