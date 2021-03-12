@@ -69,7 +69,7 @@ class _DisplayState extends State<DisplayDemo> {
               "Please check your Internet Connection and try again", context);
           break;
         }
-      }
+      }*
     });
   }
 
@@ -91,10 +91,10 @@ class _DisplayState extends State<DisplayDemo> {
     "“You’re off to great places, today is your day. Your mountain is waiting, so get on your way.”",
     "“You always pass failure on the way to success.”",
     "“No one is perfect - that’s why pencils have erasers.”",
-    "“You’re braver than you believe, and stronger than you seem, and smarter than you think.”",
+    "“You’re braver than you believe,and stronger than you seem, and smarter than you think.”",
     "“It always seems impossible until it is done.”",
     "“Positive thinking will let you do everything better than negative thinking will.”",
-    "“In every day, there are 1,440 minutes. That means we have 1,440 daily opportunities to make a positive impact.”",
+    "“In every day, there are 1,440 minutes.That means we have 1,440 daily opportunities to make a positive impact.”",
     "“The only time you fail is when you fall down and stay down.”",
     "“Positive anything is better than negative nothing.”",
     "“When you are enthusiastic about what you do, you feel this positive energy. It’s very simple.”",
@@ -116,21 +116,17 @@ class _DisplayState extends State<DisplayDemo> {
 
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+     final  double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         backgroundColor: Colors.white,
         body: Column(children: [
-          Align(
-              alignment: Alignment(0, 0),
-              child: Container(
-                height: 500,
+               Container(height: screenHeight/2,child:Padding(padding:EdgeInsets.only(
+                  left:0,top:screenHeight/13 , right:0, bottom: screenHeight/10),
                 child: Image.asset(listImages[imageNb()]),
-              )),
-          Container(height: 30),
-          Container(
-              width: 300,
-              alignment: Alignment(0, 0),
-              child: Text(tips[tipNb()])),
-          Container(height: 30),
+                 )),
+            Padding( padding: EdgeInsets.only(left:screenWidth/16,top:screenHeight/11 , right: screenWidth/16, bottom: screenHeight/15),
+              child: Text(tips[tipNb()],style: TextStyle(fontWeight: FontWeight.w900,fontSize: 17),)),
           LoadingFadingLine.circle(
             borderColor: Colors.purple[900],
             borderSize: 3.0,
