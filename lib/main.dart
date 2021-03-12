@@ -6,6 +6,7 @@ import './Start.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+
 void main() {
   runApp(Display());
 }
@@ -105,6 +106,13 @@ class _DisplayState extends State<DisplayDemo> {
     int r = min + rnd.nextInt(max - min);
     return r;
   }
+  int tipNb() {
+    int min = 0;
+    int max = tips.length - 1;
+    rnd = new Random();
+    int r = min + rnd.nextInt(max - min);
+    return r;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +129,7 @@ class _DisplayState extends State<DisplayDemo> {
           Container(
               width: 300,
               alignment: Alignment(0, 0),
-              child: Text(tips[imageNb()])),
+              child: Text(tips[tipNb()])),
           Container(height: 30),
           LoadingFadingLine.circle(
             borderColor: Colors.purple[900],
