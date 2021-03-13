@@ -1,3 +1,4 @@
+import 'package:Istishara/ExpertSignUp.dart';
 import 'package:Istishara/Login.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class _StartState extends State<_Start> {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
-    final  double screenHeight = MediaQuery.of(context).size.height;
+    final double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         backgroundColor: Colors.white,
         body: Stack(
@@ -74,7 +75,12 @@ class _StartState extends State<_Start> {
                                     fontSize: 17,
                                     fontWeight: FontWeight.w900,
                                     color: Color(0xff5848CF))),
-                            onPressed: null,
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => ExpertSU()));
+                            },
                             style: ElevatedButton.styleFrom(
                               side: BorderSide(width: 3.0, color: Colors.black),
                               shape: RoundedRectangleBorder(

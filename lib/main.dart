@@ -6,7 +6,6 @@ import './Start.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-
 void main() {
   runApp(Display());
 }
@@ -106,6 +105,7 @@ class _DisplayState extends State<DisplayDemo> {
     int r = min + rnd.nextInt(max - min);
     return r;
   }
+
   int tipNb() {
     int min = 0;
     int max = tips.length - 1;
@@ -117,16 +117,30 @@ class _DisplayState extends State<DisplayDemo> {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
-     final  double screenHeight = MediaQuery.of(context).size.height;
+    final double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         backgroundColor: Colors.white,
         body: Column(children: [
-               Container(height: screenHeight/2,child:Padding(padding:EdgeInsets.only(
-                  left:0,top:screenHeight/13 , right:0, bottom: screenHeight/10),
+          Container(
+              height: screenHeight / 2,
+              child: Padding(
+                padding: EdgeInsets.only(
+                    left: 0,
+                    top: screenHeight / 13,
+                    right: 0,
+                    bottom: screenHeight / 10),
                 child: Image.asset(listImages[imageNb()]),
-                 )),
-            Padding( padding: EdgeInsets.only(left:screenWidth/16,top:screenHeight/11 , right: screenWidth/16, bottom: screenHeight/15),
-              child: Text(tips[tipNb()],style: TextStyle(fontWeight: FontWeight.w900,fontSize: 17),)),
+              )),
+          Padding(
+              padding: EdgeInsets.only(
+                  left: screenWidth / 16,
+                  top: screenHeight / 11,
+                  right: screenWidth / 16,
+                  bottom: screenHeight / 15),
+              child: Text(
+                tips[tipNb()],
+                style: TextStyle(fontWeight: FontWeight.w900, fontSize: 17),
+              )),
           LoadingFadingLine.circle(
             borderColor: Colors.purple[900],
             borderSize: 3.0,
