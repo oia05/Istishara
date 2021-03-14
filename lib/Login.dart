@@ -53,7 +53,7 @@ class _LoginDemoState extends State<LoginDemo> {
               child: TextField(
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.email),
-                    border: OutlineInputBorder(),
+                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
                     labelText: 'Email',
                     hintText: 'Enter valid email id as abc@gmail.com'),
               ),
@@ -66,7 +66,7 @@ class _LoginDemoState extends State<LoginDemo> {
                 obscureText: true,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.lock),
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
                     labelText: 'Password',
                     hintText: 'Enter secure password'),
               ),

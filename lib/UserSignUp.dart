@@ -75,8 +75,6 @@ class _USignUpState extends State<UserSignUp> {
                       left: screenWidth / 25, right: screenWidth / 25),
                   child: TextField(
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.email),
-                        border: OutlineInputBorder(),
 
                       prefixIcon: Icon(Icons.email,color: Colors.deepPurple,),
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
@@ -94,10 +92,6 @@ class _USignUpState extends State<UserSignUp> {
                       left: screenWidth / 25, right: screenWidth / 25),
                   child: TextField(
                     decoration: InputDecoration(
-
-                        prefixIcon: Icon(Icons.phone),
-                        border: OutlineInputBorder(),
-
                       prefixIcon: Icon(Icons.phone,color: Colors.deepPurple,),
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
 
@@ -115,10 +109,6 @@ class _USignUpState extends State<UserSignUp> {
                   child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
-
-                        prefixIcon: Icon(Icons.lock),
-                        border: OutlineInputBorder(),
-
                       prefixIcon: Icon(Icons.lock,color: Colors.deepPurple,),
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
 
