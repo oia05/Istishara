@@ -68,6 +68,7 @@ flutter:
       - asset/images/nb9.png
       - asset/images/nb10.png
       - asset/images/user.png
+      - asset/images/menu.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
