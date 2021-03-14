@@ -53,7 +53,7 @@ class _DisplayState extends State<DisplayDemo> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       while (connection == "Disconnected") {
-       await Future.delayed(Duration(seconds: 6));
+        await Future.delayed(Duration(seconds: 6));
         var response = await connect.checkConnectivity();
         if (response == ConnectivityResult.mobile ||
             response == ConnectivityResult.wifi) {
