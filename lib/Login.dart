@@ -54,9 +54,8 @@ class _LoginDemoState extends State<LoginDemo> {
                     hintText: 'Enter secure password'),
               ),
             ),
-            FlatButton(
+            TextButton(
               onPressed: () {
-                //TODO FORGOT PASSWORD SCREEN GOES HERE
               },
               child: Text(
                 'Forgot Password',
@@ -68,7 +67,7 @@ class _LoginDemoState extends State<LoginDemo> {
               width: 250,
               decoration: BoxDecoration(
                   color: Colors.deepPurple, borderRadius: BorderRadius.circular(20)),
-              child: FlatButton(
+              child: TextButton(
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (_) => DashboardScreen()));

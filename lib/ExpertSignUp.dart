@@ -1,5 +1,4 @@
-import 'dart:developer';
-import 'dart:ui';
+
 
 import 'package:flutter/material.dart';
 
@@ -25,6 +24,7 @@ class _ESignUpState extends State<ExpertSignUp> {
       backgroundColor: Colors.white,
 
       body: SingleChildScrollView( 
+        child:Form(
         child: Column(  
           children: [
             Container(
@@ -32,14 +32,15 @@ class _ESignUpState extends State<ExpertSignUp> {
               padding: EdgeInsets.only(top: screenHeight/25,bottom: 0),
               child: Text("Get Started with Istishara!",style: TextStyle(fontSize: 25,color: Colors.deepPurple),),
            ),
-    
            Container(
              height: screenHeight/10,
              padding: EdgeInsets.only(left: screenWidth/25,right: screenWidth/25,),
              child: TextField(decoration: InputDecoration(
-              border: OutlineInputBorder(),
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
               hintText: "Do not use nick names",
-              labelText: "First Name"
+              labelText: "First Name",
+              prefixIcon: Icon(Icons.person,color: Colors.deepPurple,),
+              
                
              ),
              maxLength: 25,
@@ -51,12 +52,15 @@ class _ESignUpState extends State<ExpertSignUp> {
              height: screenHeight/10,
              padding: EdgeInsets.only(left: screenWidth/25,right: screenWidth/25),
              child: TextField(decoration: InputDecoration(
-              border: OutlineInputBorder(),
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
               labelText: "Last Name",
-              hintText: "Your Family Name"
+              hintText: "Your Family Name",
+               prefixIcon: Icon(Icons.person,color: Colors.deepPurple,),
+              
              ),
              maxLength: 25,
              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
+             
              
              )
              ),
@@ -65,9 +69,10 @@ class _ESignUpState extends State<ExpertSignUp> {
               height: screenHeight/10,
               padding: EdgeInsets.only(left: screenWidth/25,right: screenWidth/25),
            child: TextField(decoration: InputDecoration(
-              border: OutlineInputBorder(),
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
               labelText: "E-mail",
-              hintText: "Enter valid email as abc@example.com"
+              hintText: "Enter valid email as abc@example.com",
+              prefixIcon: Icon(Icons.email,color: Colors.deepPurple,),
 
            ),
            maxLength: 25,
@@ -77,9 +82,10 @@ class _ESignUpState extends State<ExpertSignUp> {
               height: screenHeight/10,
               padding: EdgeInsets.only(left: screenWidth/25,right: screenWidth/25),
            child: TextField(decoration: InputDecoration(
-              border: OutlineInputBorder(),
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
               labelText: "Phone Number",
-              hintText: "8-digits Number"
+              hintText: "8-digits Number",
+               prefixIcon: Icon(Icons.phone,color: Colors.deepPurple,),
                
            ),
            maxLength: 25,
@@ -89,9 +95,10 @@ class _ESignUpState extends State<ExpertSignUp> {
               height: screenHeight/10,
               padding: EdgeInsets.only(left: screenWidth/25,right: screenWidth/25),
            child: TextField(decoration: InputDecoration(
-              border: OutlineInputBorder(),
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
               labelText: "Password",
-              hintText: "Strong password consists of 8 characters"
+              hintText: "Strong password consists of 8 characters",
+              prefixIcon: Icon(Icons.lock,color: Colors.deepPurple,),
 
                
            ),
@@ -100,12 +107,15 @@ class _ESignUpState extends State<ExpertSignUp> {
            ),
 
            Container(
-             
-           )
+             height: screenHeight/10,
+             child:Align( 
+               alignment: Alignment(1,0),
+              child:RaisedButton(onPressed: (){},child: Text("Hey"),),
+           ))
           ],
         ),
 
       )
-    );
+    ));
   }
 }
