@@ -9,7 +9,7 @@ class ListName extends StatefulWidget{
 }
 
 class Name extends State<ListName>{
-  List<String> Names = [
+  List<String> names = [
     'Expert1','Expert2','Expert3','Expert4','Expert5','Expert6','Exper7','Expert8',
     'Expert9','Expert10','Expert11','Expert12','Expert13','Expert14','Expert15','Expert16','Expert17',
     'Expert18','Expert18','Expert19','Expert20'
@@ -23,8 +23,8 @@ class Name extends State<ListName>{
       body: new Container(
         child: new ListView.builder(
             reverse: false,
-            itemBuilder: (_,int index)=>EachList(this.Names[index]),
-            itemCount: this.Names.length,
+            itemBuilder: (_,int index)=>EachList(this.names[index]),
+            itemCount: this.names.length,
         ),
       ),
     );

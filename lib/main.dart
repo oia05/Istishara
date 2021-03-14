@@ -4,7 +4,6 @@ import 'package:loading_animations/loading_animations.dart';
 import 'dart:math';
 import './Start.dart';
 import 'package:connectivity/connectivity.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() {
   runApp(Display());
@@ -39,7 +38,7 @@ void _showDialog(String title, String content, BuildContext context) {
             title: Text("You are " + title),
             content: Text(content),
             actions: <Widget>[
-              FlatButton(
+              TextButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -54,7 +53,7 @@ class _DisplayState extends State<DisplayDemo> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       while (connection == "Disconnected") {
-        var response2 = await Future.delayed(Duration(seconds: 6));
+        await Future.delayed(Duration(seconds: 6));
         var response = await connect.checkConnectivity();
         if (response == ConnectivityResult.mobile ||
             response == ConnectivityResult.wifi) {
