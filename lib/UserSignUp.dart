@@ -4,19 +4,19 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class ExpertSU extends StatelessWidget {
+class UserSU extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ExpertSignUp();
+    return UserSignUp();
   }
 }
 
-class ExpertSignUp extends StatefulWidget {
+class UserSignUp extends StatefulWidget {
   @override
-  _ESignUpState createState() => _ESignUpState();
+  _USignUpState createState() => _USignUpState();
 }
 
-class _ESignUpState extends State<ExpertSignUp> {
+class _USignUpState extends State<UserSignUp> {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
@@ -114,18 +114,6 @@ class _ESignUpState extends State<ExpertSignUp> {
                       fontWeight: FontWeight.w500,
                     ),
                   )),
-              Container(
-                child: FlatButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => Experts()));
-                  },
-                  child: Text(
-                    'Next',
-                    style: TextStyle(color: Colors.deepPurple, fontSize: 20),
-                  ),
-                ),
-              )
             ],
           ),
         ));

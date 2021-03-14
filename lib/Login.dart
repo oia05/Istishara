@@ -16,20 +16,35 @@ class LoginDemo extends StatefulWidget {
 class _LoginDemoState extends State<LoginDemo> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar( 
-        title: Text("Login Page")
+        title: Text("Login Page"),
+        elevation: 0,
+        backgroundColor: Color(0xFF311B92)
+        
       ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            Container(height: size.height *0.2,
+            child: Stack(
+              children:<Widget>[
+                Container(
+                 height: size.height *0.2 -2.7,
+                 decoration: BoxDecoration(color: const Color(0xFF311B92),
+                 borderRadius: BorderRadius.only(bottomLeft: Radius.circular(36),
+                 bottomRight: Radius.circular(36)),)
+                )
+              ],)),
             Padding(
               padding: const EdgeInsets.only(top: 40.0),
               child: Center(
                 child: Container(
+                  child: Image.asset('asset/images/user.png'),
                     width: 200,
                     height: 150,
-                    child: Image.asset('asset/images/nb1.png')),
+                )
               ),
             ),
             Padding(
@@ -37,6 +52,7 @@ class _LoginDemoState extends State<LoginDemo> {
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
                 decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.email),
                     border: OutlineInputBorder(),
                     labelText: 'Email',
                     hintText: 'Enter valid email id as abc@gmail.com'),
@@ -49,6 +65,7 @@ class _LoginDemoState extends State<LoginDemo> {
               child: TextField(
                 obscureText: true,
                 decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.lock),
                     border: OutlineInputBorder(),
                     labelText: 'Password',
                     hintText: 'Enter secure password'),
@@ -60,14 +77,14 @@ class _LoginDemoState extends State<LoginDemo> {
               },
               child: Text(
                 'Forgot Password',
-                style: TextStyle(color: Colors.deepPurple, fontSize: 15),
+                style: TextStyle(color: Colors.deepPurple[900], fontSize: 15),
               ),
             ),
             Container(
               height: 50,
               width: 250,
               decoration: BoxDecoration(
-                  color: Colors.deepPurple, borderRadius: BorderRadius.circular(20)),
+                  color: Colors.deepPurple[900], borderRadius: BorderRadius.circular(20)),
               child: FlatButton(
                 onPressed: () {
                   Navigator.push(context,

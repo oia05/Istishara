@@ -1,6 +1,7 @@
 import 'package:Istishara/ExpertSignUp.dart';
 import 'package:Istishara/Login.dart';
 import 'package:flutter/material.dart';
+import 'UserSignUp.dart';
 
 class StartApp extends StatelessWidget {
   @override
@@ -57,7 +58,10 @@ class _StartState extends State<_Start> {
                                     fontSize: 17,
                                     fontWeight: FontWeight.w900,
                                     color: Color(0xff5848CF))),
-                            onPressed: null,
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (_) => UserSU()));
+                            },
                             style: ElevatedButton.styleFrom(
                               side: BorderSide(width: 3.0, color: Colors.black),
                               shape: RoundedRectangleBorder(
