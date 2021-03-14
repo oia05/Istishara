@@ -44,15 +44,17 @@ class _ESignUpState extends State<ExpertSignUp> {
                   left: screenWidth / 25,
                   right: screenWidth / 25,
                 ),
-                child: TextField(
+                child: TextFormField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
                       prefixIcon: Icon(Icons.person,color: Colors.deepPurple,),
                       hintText: "Do not use nick names",
-                      labelText: "First Name"),
+                      labelText: "First Name"
+                      ),
                   maxLength: 25,
                   style: TextStyle(
                     fontWeight: FontWeight.w500,fontSize: 20
+                    
                     
                   ),
                 ),
