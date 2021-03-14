@@ -74,7 +74,7 @@ class _USignUpState extends State<UserSignUp> {
                       left: screenWidth / 25, right: screenWidth / 25),
                   child: TextField(
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.email),
+                        prefixIcon: Icon(Icons.email),
                         border: OutlineInputBorder(),
                         labelText: "E-mail",
                         hintText: "Enter valid email as abc@example.com"),
@@ -89,7 +89,7 @@ class _USignUpState extends State<UserSignUp> {
                       left: screenWidth / 25, right: screenWidth / 25),
                   child: TextField(
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.phone),
+                        prefixIcon: Icon(Icons.phone),
                         border: OutlineInputBorder(),
                         labelText: "Phone Number",
                         hintText: "8-digits Number"),
@@ -105,7 +105,7 @@ class _USignUpState extends State<UserSignUp> {
                   child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.lock),
+                        prefixIcon: Icon(Icons.lock),
                         border: OutlineInputBorder(),
                         labelText: "Password",
                         hintText: "Strong password consists of 8 characters"),
