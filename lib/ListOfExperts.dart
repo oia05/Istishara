@@ -48,5 +48,4 @@ class EachList extends StatelessWidget{
       ),
     );
   }
-
 }
