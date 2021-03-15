@@ -1,5 +1,6 @@
 import 'ListOfExperts.dart';
 import 'package:flutter/material.dart';
+import 'nav-drawer.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({
@@ -9,6 +10,7 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       drawer: NavDrawer(),
       appBar: AppBar(
         title: Text('Types Of Experts'),
       ),
