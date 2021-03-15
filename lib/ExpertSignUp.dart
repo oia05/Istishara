@@ -37,6 +37,7 @@ class _ESignUpState extends State<ExpertSignUp> {
     return false;
   }
 
+
   final _PasswordController = TextEditingController();
   final _ConfirmPasswordController = TextEditingController();
   static final _formKeyFname = GlobalKey<FormState>();
@@ -85,7 +86,7 @@ class _ESignUpState extends State<ExpertSignUp> {
                   child: TextFormField(
                     onTap: () {
                       setState(() {
-                        
+
                         _formKeyFname.currentState.reset();
                       });
                     },
